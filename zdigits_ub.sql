@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 01, 2024 at 03:47 PM
+-- Generation Time: May 01, 2024 at 03:51 PM
 -- Server version: 10.1.45-MariaDB
 -- PHP Version: 7.2.30
 
@@ -877,7 +877,10 @@ INSERT INTO `erp_replica_audit_trail` (`id`, `type`, `trans_no`, `user`, `stamp`
 (1055, 18, 93, 1, '2024-05-01 09:55:25', '', 14, '2024-05-01', 0),
 (1056, 25, 82, 1, '2024-05-01 09:57:05', '', 14, '2024-05-01', 0),
 (1057, 20, 77, 1, '2024-05-01 09:58:07', '', 14, '2024-05-01', 0),
-(1058, 22, 106, 1, '2024-05-01 10:05:20', '', 14, '2024-05-01', 0);
+(1058, 22, 106, 1, '2024-05-01 10:05:20', '', 14, '2024-05-01', 0),
+(1059, 18, 94, 1, '2024-05-01 10:49:50', '', 14, '2024-05-01', 0),
+(1060, 25, 83, 1, '2024-05-01 10:50:35', '', 14, '2024-05-01', 0),
+(1061, 20, 78, 1, '2024-05-01 10:51:03', '', 14, '2024-05-01', 0);
 
 -- --------------------------------------------------------
 
@@ -4907,7 +4910,13 @@ INSERT INTO `erp_replica_gl_trans` (`counter`, `type`, `type_no`, `tran_date`, `
 (2830, 20, 77, '2024-05-01', '1550', '', 250, 26, 0, NULL, NULL),
 (2831, 20, 77, '2024-05-01', '1550', '', 400, 26, 0, NULL, NULL),
 (2832, 22, 106, '2024-05-01', '2100', '', 650, 24, 0, 3, 0x37),
-(2833, 22, 106, '2024-05-01', '1066', '', -650, 24, 0, NULL, NULL);
+(2833, 22, 106, '2024-05-01', '1066', '', -650, 24, 0, NULL, NULL),
+(2834, 25, 83, '2024-05-01', '1510', '1001', 250, 0, 0, NULL, NULL),
+(2835, 25, 83, '2024-05-01', '1510', '1003', 800, 0, 0, NULL, NULL),
+(2836, 25, 83, '2024-05-01', '1550', '', -1050, 0, 0, NULL, NULL),
+(2837, 20, 78, '2024-05-01', '2100', '', -1050, 17, 0, 3, 0x37),
+(2838, 20, 78, '2024-05-01', '1550', '', 250, 17, 0, NULL, NULL),
+(2839, 20, 78, '2024-05-01', '1550', '', 800, 17, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -5011,7 +5020,8 @@ INSERT INTO `erp_replica_grn_batch` (`id`, `supplier_id`, `purch_order_no`, `ref
 (79, 65, 89, '032/2024	', '2024-04-30', '00006', 1),
 (80, 64, 91, '033/2024	', '2024-04-30', '00001', 1),
 (81, 7, 92, '034/2024	', '2024-05-01', '00005', 1),
-(82, 7, 93, '0134/2024	', '2024-05-01', '00005', 1);
+(82, 7, 93, '0134/2024	', '2024-05-01', '00005', 1),
+(83, 7, 94, '135/2024	', '2024-05-01', '00001', 1);
 
 -- --------------------------------------------------------
 
@@ -5478,7 +5488,9 @@ INSERT INTO `erp_replica_grn_items` (`id`, `grn_batch_id`, `po_detail_item`, `it
 (442, 80, 456, '3123', 'service', 1, 0),
 (443, 81, 457, '1003', 'Binding Wire', 12, 12),
 (444, 82, 458, '1003', 'Binding Wire', 1, 1),
-(445, 82, 459, '1001', 'Steel', 1, 1);
+(445, 82, 459, '1001', 'Steel', 1, 1),
+(446, 83, 460, '1001', 'Steel', 1, 1),
+(447, 83, 461, '1003', 'Binding Wire', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -6761,7 +6773,8 @@ INSERT INTO `erp_replica_purch_orders` (`order_no`, `supplier_id`, `comments`, `
 (90, 65, '', '2024-04-30', '031/2024	', 'test', '00005', 'Ammar address', 0, 0, 0, 0),
 (91, 64, '', '2024-04-30', '032/2024	', '', '00005', 'Ammar address', 9000, 0, 9000, 0),
 (92, 7, '', '2024-05-01', '033/2024	', '44', '00005', 'Ammar address', 4800, 0, 0, 0),
-(93, 7, '', '2024-05-01', '0134/2024	', '0134', '00005', 'Ammar address', 650, 0, 0, 0);
+(93, 7, '', '2024-05-01', '0134/2024	', '0134', '00005', 'Ammar address', 650, 0, 0, 0),
+(94, 7, '', '2024-05-01', '135/2024	', '', '00001', 'Plot B-86 address', 1050, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -7243,7 +7256,9 @@ INSERT INTO `erp_replica_purch_order_details` (`po_detail_item`, `order_no`, `it
 (456, 91, '3123', 'service', '2024-05-10', 0, 9000, 9000, 0, 1, 1),
 (457, 92, '1003', 'Binding Wire', '2024-05-11', 12, 400, 400, 381.62195121951, 12, 12),
 (458, 93, '1003', 'Binding Wire', '2024-05-11', 1, 400, 400, 381.73333333333, 1, 1),
-(459, 93, '1001', 'Steel', '2024-05-11', 1, 250, 250, 213.48640134445, 1, 1);
+(459, 93, '1001', 'Steel', '2024-05-11', 1, 250, 250, 213.48640134445, 1, 1),
+(460, 94, '1001', 'Steel', '2024-05-11', 1, 250, 250, 213.48744227035, 1, 1),
+(461, 94, '1003', 'Binding Wire', '2024-05-11', 2, 400, 400, 381.95209580838, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -7702,6 +7717,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (59, 18, '040/2023	'),
 (75, 18, '041/2023	'),
 (82, 18, '042/2023	'),
+(94, 18, '135/2024	'),
 (1, 20, '001/2022	'),
 (2, 20, '001/2023	'),
 (44, 20, '001/2024	'),
@@ -7779,6 +7795,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (43, 20, '039/2023	'),
 (48, 20, '040/2023	'),
 (52, 20, '041/2023	'),
+(78, 20, '135/2024	'),
 (1, 22, '001/2022	'),
 (3, 22, '001/2023	'),
 (53, 22, '001/2024	'),
@@ -7967,6 +7984,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (45, 25, '045/2023	'),
 (46, 25, '046/2023	'),
 (47, 25, '047/2023	'),
+(83, 25, '135/2024	'),
 (18, 40, '001/2023	'),
 (19, 40, '001/2023	'),
 (20, 40, '001/2024	'),
@@ -8327,9 +8345,9 @@ CREATE TABLE `erp_replica_stock_master` (
 --
 
 INSERT INTO `erp_replica_stock_master` (`stock_id`, `category_id`, `tax_type_id`, `description`, `long_description`, `units`, `mb_flag`, `sales_account`, `cogs_account`, `inventory_account`, `adjustment_account`, `wip_account`, `dimension_id`, `dimension2_id`, `purchase_cost`, `material_cost`, `labour_cost`, `overhead_cost`, `inactive`, `no_sale`, `no_purchase`, `editable`, `depreciation_method`, `depreciation_rate`, `depreciation_factor`, `depreciation_start`, `depreciation_date`, `fa_class_id`) VALUES
-('1001', 5, 2, 'Steel', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 250, 213.48640134445, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
+('1001', 5, 2, 'Steel', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 250, 213.48744227035, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1002', 5, 2, 'Cement', '', 'Bag', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 1170, 1069.7189992745, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
-('1003', 5, 2, 'Binding Wire', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 400, 381.73333333333, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
+('1003', 5, 2, 'Binding Wire', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 400, 381.95209580838, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1004', 5, 2, 'Raiti', '', 'Sq', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 66.666666, 55.047618804761, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1005', 5, 2, 'Mix', '', 'Sq', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 66.666666, 56.541353266916, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1006', 5, 2, 'Crush', '', 'Sq', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 70, 73.625496374501, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
@@ -8862,7 +8880,9 @@ INSERT INTO `erp_replica_stock_moves` (`trans_id`, `trans_no`, `stock_id`, `type
 (444, 80, '3123', 25, '00001', '2024-04-30', 9000, '', 1, 0),
 (445, 81, '1003', 25, '00005', '2024-05-01', 400, '', 12, 381.62195121951),
 (446, 82, '1003', 25, '00005', '2024-05-01', 400, '', 1, 381.73333333333),
-(447, 82, '1001', 25, '00005', '2024-05-01', 250, '', 1, 213.48640134445);
+(447, 82, '1001', 25, '00005', '2024-05-01', 250, '', 1, 213.48640134445),
+(448, 83, '1001', 25, '00001', '2024-05-01', 250, '', 1, 213.48744227035),
+(449, 83, '1003', 25, '00001', '2024-05-01', 400, '', 2, 381.95209580838);
 
 -- --------------------------------------------------------
 
@@ -9533,7 +9553,9 @@ INSERT INTO `erp_replica_supp_invoice_items` (`id`, `supp_trans_no`, `supp_trans
 (454, 75, 20, '0', 441, 454, '1014', 'keel', 200, 10, 0, '', 0, 0),
 (455, 76, 20, '0', 443, 457, '1003', 'Binding Wire', 12, 400, 0, '', 0, 0),
 (456, 77, 20, '0', 445, 459, '1001', 'Steel', 1, 250, 0, '', 0, 0),
-(457, 77, 20, '0', 444, 458, '1003', 'Binding Wire', 1, 400, 0, '', 0, 0);
+(457, 77, 20, '0', 444, 458, '1003', 'Binding Wire', 1, 400, 0, '', 0, 0),
+(458, 78, 20, '0', 446, 460, '1001', 'Steel', 1, 250, 0, '', 0, 0),
+(459, 78, 20, '0', 447, 461, '1003', 'Binding Wire', 2, 400, 0, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -9656,6 +9678,7 @@ INSERT INTO `erp_replica_supp_trans` (`trans_no`, `type`, `supplier_id`, `refere
 (75, 20, 65, '030/2024	', '9797', '2024-04-30', '2024-04-30', 2050, 0, 0, 1, 0, 0),
 (76, 20, 7, '031/2024	', '66', '2024-05-01', '2024-05-01', 4800, 0, 0, 1, 0, 0),
 (77, 20, 7, '0134/2024	', '0134', '2024-05-01', '2024-05-01', 650, 0, 0, 1, 650, 0),
+(78, 20, 7, '135/2024	', '002', '2024-05-01', '2024-05-01', 1050, 0, 0, 1, 0, 0),
 (1, 22, 10, '001/2022	', '', '2022-05-28', '2022-05-28', -100000, 0, 0, 1, 0, 0),
 (2, 22, 10, '002/2022	', '', '2022-05-28', '2022-05-28', -100000, 0, 0, 1, 100000, 0),
 (3, 22, 30, '001/2023	', '', '2022-09-23', '2022-09-23', -8450, 0, 0, 1, 8450, 0),
@@ -11147,7 +11170,7 @@ ALTER TABLE `erp_replica_attachments`
 -- AUTO_INCREMENT for table `erp_replica_audit_trail`
 --
 ALTER TABLE `erp_replica_audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1059;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1062;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_bank_accounts`
@@ -11279,19 +11302,19 @@ ALTER TABLE `erp_replica_floors`
 -- AUTO_INCREMENT for table `erp_replica_gl_trans`
 --
 ALTER TABLE `erp_replica_gl_trans`
-  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2834;
+  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2840;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_grn_batch`
 --
 ALTER TABLE `erp_replica_grn_batch`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_grn_items`
 --
 ALTER TABLE `erp_replica_grn_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=446;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=448;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_groups`
@@ -11429,13 +11452,13 @@ ALTER TABLE `erp_replica_project_units`
 -- AUTO_INCREMENT for table `erp_replica_purch_orders`
 --
 ALTER TABLE `erp_replica_purch_orders`
-  MODIFY `order_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `order_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_purch_order_details`
 --
 ALTER TABLE `erp_replica_purch_order_details`
-  MODIFY `po_detail_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=460;
+  MODIFY `po_detail_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=462;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_quick_entries`
@@ -11531,7 +11554,7 @@ ALTER TABLE `erp_replica_stock_category`
 -- AUTO_INCREMENT for table `erp_replica_stock_moves`
 --
 ALTER TABLE `erp_replica_stock_moves`
-  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=448;
+  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_suppliers`
@@ -11549,7 +11572,7 @@ ALTER TABLE `erp_replica_supp_allocations`
 -- AUTO_INCREMENT for table `erp_replica_supp_invoice_items`
 --
 ALTER TABLE `erp_replica_supp_invoice_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=458;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=460;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_tags`
