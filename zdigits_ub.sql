@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 01, 2024 at 03:51 PM
+-- Generation Time: May 01, 2024 at 03:53 PM
 -- Server version: 10.1.45-MariaDB
 -- PHP Version: 7.2.30
 
@@ -880,7 +880,8 @@ INSERT INTO `erp_replica_audit_trail` (`id`, `type`, `trans_no`, `user`, `stamp`
 (1058, 22, 106, 1, '2024-05-01 10:05:20', '', 14, '2024-05-01', 0),
 (1059, 18, 94, 1, '2024-05-01 10:49:50', '', 14, '2024-05-01', 0),
 (1060, 25, 83, 1, '2024-05-01 10:50:35', '', 14, '2024-05-01', 0),
-(1061, 20, 78, 1, '2024-05-01 10:51:03', '', 14, '2024-05-01', 0);
+(1061, 20, 78, 1, '2024-05-01 10:51:03', '', 14, '2024-05-01', 0),
+(1062, 22, 107, 1, '2024-05-01 10:53:23', '', 14, '2024-05-01', 0);
 
 -- --------------------------------------------------------
 
@@ -1285,7 +1286,8 @@ INSERT INTO `erp_replica_bank_trans` (`id`, `type`, `trans_no`, `bank_act`, `ref
 (443, 22, 104, '10', '047/2024	', '2024-04-30', 0, 0, 0, 3, 0x3634, NULL),
 (444, 22, 105, '10', '047/2024	', '2024-04-30', -9000, 0, 0, 3, 0x3634, NULL),
 (445, 1, 126, '7', '011/2024	', '2024-04-30', -900, 0, 0, 3, 0x3631, NULL),
-(446, 22, 106, '9', '0134/2024	', '2024-05-01', -650, 0, 0, 3, 0x37, NULL);
+(446, 22, 106, '9', '0134/2024	', '2024-05-01', -650, 0, 0, 3, 0x37, NULL),
+(447, 22, 107, '10', '135/2024	', '2024-05-01', -1050, 0, 0, 3, 0x37, NULL);
 
 -- --------------------------------------------------------
 
@@ -1898,7 +1900,8 @@ INSERT INTO `erp_replica_comments` (`type`, `id`, `date_`, `memo_`) VALUES
 (22, 101, '2024-04-02', 'BAH Trsfr from Umair A/c to Naveed Material Rs.34000\n'),
 (22, 102, '2024-04-30', '12345'),
 (22, 103, '2024-04-30', '1122'),
-(20, 77, '2024-05-01', 'test');
+(20, 77, '2024-05-01', 'test'),
+(22, 107, '2024-05-01', '002');
 
 -- --------------------------------------------------------
 
@@ -4916,7 +4919,9 @@ INSERT INTO `erp_replica_gl_trans` (`counter`, `type`, `type_no`, `tran_date`, `
 (2836, 25, 83, '2024-05-01', '1550', '', -1050, 0, 0, NULL, NULL),
 (2837, 20, 78, '2024-05-01', '2100', '', -1050, 17, 0, 3, 0x37),
 (2838, 20, 78, '2024-05-01', '1550', '', 250, 17, 0, NULL, NULL),
-(2839, 20, 78, '2024-05-01', '1550', '', 800, 17, 0, NULL, NULL);
+(2839, 20, 78, '2024-05-01', '1550', '', 800, 17, 0, NULL, NULL),
+(2840, 22, 107, '2024-05-01', '2100', '', 1050, 26, 0, 3, 0x37),
+(2841, 22, 107, '2024-05-01', '1067', '', -1050, 26, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -7902,6 +7907,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (105, 22, '047/2024	'),
 (54, 22, '048/2023	'),
 (58, 22, '049/2023	'),
+(107, 22, '135/2024	'),
 (1, 25, '001/2023	'),
 (48, 25, '001/2024	'),
 (2, 25, '002/2023	'),
@@ -9067,7 +9073,8 @@ INSERT INTO `erp_replica_supp_allocations` (`id`, `person_id`, `amt`, `date_allo
 (74, 7, 11700, '2024-04-30', 102, 22, 73, 20),
 (75, 65, 11470000, '2024-04-30', 103, 22, 74, 20),
 (77, 64, 9000, '2024-04-30', 105, 22, 91, 18),
-(78, 7, 650, '2024-05-01', 106, 22, 77, 20);
+(78, 7, 650, '2024-05-01', 106, 22, 77, 20),
+(79, 7, 1050, '2024-05-01', 107, 22, 78, 20);
 
 -- --------------------------------------------------------
 
@@ -9678,7 +9685,7 @@ INSERT INTO `erp_replica_supp_trans` (`trans_no`, `type`, `supplier_id`, `refere
 (75, 20, 65, '030/2024	', '9797', '2024-04-30', '2024-04-30', 2050, 0, 0, 1, 0, 0),
 (76, 20, 7, '031/2024	', '66', '2024-05-01', '2024-05-01', 4800, 0, 0, 1, 0, 0),
 (77, 20, 7, '0134/2024	', '0134', '2024-05-01', '2024-05-01', 650, 0, 0, 1, 650, 0),
-(78, 20, 7, '135/2024	', '002', '2024-05-01', '2024-05-01', 1050, 0, 0, 1, 0, 0),
+(78, 20, 7, '135/2024	', '002', '2024-05-01', '2024-05-01', 1050, 0, 0, 1, 1050, 0),
 (1, 22, 10, '001/2022	', '', '2022-05-28', '2022-05-28', -100000, 0, 0, 1, 0, 0),
 (2, 22, 10, '002/2022	', '', '2022-05-28', '2022-05-28', -100000, 0, 0, 1, 100000, 0),
 (3, 22, 30, '001/2023	', '', '2022-09-23', '2022-09-23', -8450, 0, 0, 1, 8450, 0),
@@ -9784,7 +9791,8 @@ INSERT INTO `erp_replica_supp_trans` (`trans_no`, `type`, `supplier_id`, `refere
 (103, 22, 65, '046/2024	', '', '2024-04-30', '2024-04-30', -11470000, 0, 0, 1, 11470000, 0),
 (104, 22, 64, '047/2024	', '', '2024-04-30', '2024-04-30', 0, 0, 0, 1, 0, 0),
 (105, 22, 64, '047/2024	', '', '2024-04-30', '2024-04-30', -9000, 0, 0, 1, 9000, 0),
-(106, 22, 7, '0134/2024	', '', '2024-05-01', '2024-05-01', -650, 0, 0, 1, 650, 0);
+(106, 22, 7, '0134/2024	', '', '2024-05-01', '2024-05-01', -650, 0, 0, 1, 650, 0),
+(107, 22, 7, '135/2024	', '', '2024-05-01', '2024-05-01', -1050, 0, 0, 1, 1050, 0);
 
 -- --------------------------------------------------------
 
@@ -11170,7 +11178,7 @@ ALTER TABLE `erp_replica_attachments`
 -- AUTO_INCREMENT for table `erp_replica_audit_trail`
 --
 ALTER TABLE `erp_replica_audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1062;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1063;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_bank_accounts`
@@ -11182,7 +11190,7 @@ ALTER TABLE `erp_replica_bank_accounts`
 -- AUTO_INCREMENT for table `erp_replica_bank_trans`
 --
 ALTER TABLE `erp_replica_bank_trans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=447;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=448;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_block`
@@ -11302,7 +11310,7 @@ ALTER TABLE `erp_replica_floors`
 -- AUTO_INCREMENT for table `erp_replica_gl_trans`
 --
 ALTER TABLE `erp_replica_gl_trans`
-  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2840;
+  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2842;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_grn_batch`
@@ -11566,7 +11574,7 @@ ALTER TABLE `erp_replica_suppliers`
 -- AUTO_INCREMENT for table `erp_replica_supp_allocations`
 --
 ALTER TABLE `erp_replica_supp_allocations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_supp_invoice_items`
