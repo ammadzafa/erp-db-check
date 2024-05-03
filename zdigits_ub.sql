@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 03, 2024 at 04:44 PM
+-- Generation Time: May 03, 2024 at 04:47 PM
 -- Server version: 10.1.45-MariaDB
 -- PHP Version: 7.2.30
 
@@ -903,7 +903,8 @@ INSERT INTO `erp_replica_audit_trail` (`id`, `type`, `trans_no`, `user`, `stamp`
 (1081, 25, 89, 1, '2024-05-03 10:50:02', '', 14, '2024-05-03', 0),
 (1082, 20, 82, 1, '2024-05-03 10:50:25', '', 14, '2024-05-03', 0),
 (1083, 22, 111, 1, '2024-05-03 10:54:42', '', 14, '2024-05-03', 0),
-(1084, 18, 102, 1, '2024-05-03 11:44:09', '', 14, '2024-05-03', 0);
+(1084, 18, 102, 1, '2024-05-03 11:44:09', '', 14, '2024-05-03', 0),
+(1085, 25, 90, 1, '2024-05-03 11:46:58', '', 14, '2024-05-03', 0);
 
 -- --------------------------------------------------------
 
@@ -4983,7 +4984,9 @@ INSERT INTO `erp_replica_gl_trans` (`counter`, `type`, `type_no`, `tran_date`, `
 (2866, 20, 82, '2024-05-03', '2100', '', -50500, 26, 0, 3, 0x3139),
 (2867, 20, 82, '2024-05-03', '1550', '', 50500, 26, 0, NULL, NULL),
 (2868, 22, 111, '2024-05-03', '2100', '', 50500, 26, 0, 3, 0x3139),
-(2869, 22, 111, '2024-05-03', '1061', '', -50500, 26, 0, NULL, NULL);
+(2869, 22, 111, '2024-05-03', '1061', '', -50500, 26, 0, NULL, NULL),
+(2870, 25, 90, '2024-05-03', '1510', '1001', 250, 0, 0, NULL, NULL),
+(2871, 25, 90, '2024-05-03', '1550', '', -250, 0, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -5094,7 +5097,8 @@ INSERT INTO `erp_replica_grn_batch` (`id`, `supplier_id`, `purch_order_no`, `ref
 (86, 10, 97, '138/2024	', '2024-05-03', '00005', 1),
 (87, 10, 98, '139/2024	', '2024-05-03', '00005', 1),
 (88, 10, 100, '140/2024	', '2024-05-03', '00005', 1),
-(89, 19, 101, '141/2024	', '2024-05-03', '00005', 1);
+(89, 19, 101, '141/2024	', '2024-05-03', '00005', 1),
+(90, 7, 102, '142/2024	', '2024-05-03', '00001', 1);
 
 -- --------------------------------------------------------
 
@@ -5569,7 +5573,8 @@ INSERT INTO `erp_replica_grn_items` (`id`, `grn_batch_id`, `po_detail_item`, `it
 (450, 86, 464, '1001', 'Steel', 10, 10),
 (451, 87, 465, '1001', 'Steel', 20, 0),
 (452, 88, 467, '1001', 'Steel', 20, 0),
-(453, 89, 468, '1007', 'Stones for Elevation', 101, 101);
+(453, 89, 468, '1007', 'Stones for Elevation', 101, 101),
+(454, 90, 469, '1001', 'Steel', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -7357,7 +7362,7 @@ INSERT INTO `erp_replica_purch_order_details` (`po_detail_item`, `order_no`, `it
 (466, 99, '1004', 'Raiti', '2024-05-13', 0, 101, 0, 0, 2, 0),
 (467, 100, '1001', 'Steel', '2024-05-13', 0, 204, 204, 213.48209456458, 20, 20),
 (468, 101, '1007', 'Stones for Elevation', '2024-05-13', 101, 500, 500, 369.5652173913, 101, 101),
-(469, 102, '1001', 'Steel', '2024-05-13', 0, 250, 0, 0, 1, 0);
+(469, 102, '1001', 'Steel', '2024-05-13', 0, 250, 250, 213.48313407228, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -8107,6 +8112,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (87, 25, '139/2024	'),
 (88, 25, '140/2024	'),
 (89, 25, '141/2024	'),
+(90, 25, '142/2024	'),
 (18, 40, '001/2023	'),
 (19, 40, '001/2023	'),
 (20, 40, '001/2024	'),
@@ -8467,7 +8473,7 @@ CREATE TABLE `erp_replica_stock_master` (
 --
 
 INSERT INTO `erp_replica_stock_master` (`stock_id`, `category_id`, `tax_type_id`, `description`, `long_description`, `units`, `mb_flag`, `sales_account`, `cogs_account`, `inventory_account`, `adjustment_account`, `wip_account`, `dimension_id`, `dimension2_id`, `purchase_cost`, `material_cost`, `labour_cost`, `overhead_cost`, `inactive`, `no_sale`, `no_purchase`, `editable`, `depreciation_method`, `depreciation_rate`, `depreciation_factor`, `depreciation_start`, `depreciation_date`, `fa_class_id`) VALUES
-('1001', 5, 2, 'Steel', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 204, 213.48209456458, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
+('1001', 5, 2, 'Steel', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 204, 213.48313407228, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1002', 5, 2, 'Cement', '', 'Bag', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 1170, 1069.7189992745, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1003', 5, 2, 'Binding Wire', '', 'KG', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 400, 381.95209580838, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
 ('1004', 5, 2, 'Raiti', '', 'Sq', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 66.666666, 55.047618804761, 0, 0, 0, 1, 0, 0, '', 0, 0, '0000-00-00', '0000-00-00', ''),
@@ -9010,7 +9016,8 @@ INSERT INTO `erp_replica_stock_moves` (`trans_id`, `trans_no`, `stock_id`, `type
 (452, 86, '1001', 25, '00005', '2024-05-03', 204, '', 10, 213.49290375785),
 (453, 87, '1001', 25, '00005', '2024-05-03', 204, '', 20, 213.48749608246),
 (454, 88, '1001', 25, '00005', '2024-05-03', 204, '', 20, 213.48209456458),
-(455, 89, '1007', 25, '00005', '2024-05-03', 500, '', 101, 369.5652173913);
+(455, 89, '1007', 25, '00005', '2024-05-03', 500, '', 101, 369.5652173913),
+(456, 90, '1001', 25, '00001', '2024-05-03', 250, '', 1, 213.48313407228);
 
 -- --------------------------------------------------------
 
@@ -11317,7 +11324,7 @@ ALTER TABLE `erp_replica_attachments`
 -- AUTO_INCREMENT for table `erp_replica_audit_trail`
 --
 ALTER TABLE `erp_replica_audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1085;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1086;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_bank_accounts`
@@ -11449,19 +11456,19 @@ ALTER TABLE `erp_replica_floors`
 -- AUTO_INCREMENT for table `erp_replica_gl_trans`
 --
 ALTER TABLE `erp_replica_gl_trans`
-  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2870;
+  MODIFY `counter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2872;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_grn_batch`
 --
 ALTER TABLE `erp_replica_grn_batch`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_grn_items`
 --
 ALTER TABLE `erp_replica_grn_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=454;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=455;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_groups`
@@ -11701,7 +11708,7 @@ ALTER TABLE `erp_replica_stock_category`
 -- AUTO_INCREMENT for table `erp_replica_stock_moves`
 --
 ALTER TABLE `erp_replica_stock_moves`
-  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=456;
+  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=457;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_suppliers`
