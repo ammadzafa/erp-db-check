@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 07, 2024 at 03:30 PM
+-- Generation Time: May 07, 2024 at 03:33 PM
 -- Server version: 10.1.45-MariaDB
 -- PHP Version: 7.2.30
 
@@ -941,7 +941,8 @@ INSERT INTO `erp_replica_audit_trail` (`id`, `type`, `trans_no`, `user`, `stamp`
 (1119, 2, 111, 1, '2024-05-06 20:34:25', '', 14, '2024-05-07', NULL),
 (1120, 2, 111, 1, '2024-05-06 20:34:25', '', 14, '2024-05-07', 0),
 (1121, 22, 115, 1, '2024-05-06 21:02:17', '', 14, '2024-05-07', 0),
-(1122, 22, 116, 1, '2024-05-06 21:03:37', '', 14, '2024-05-07', 0);
+(1122, 22, 116, 1, '2024-05-06 21:03:37', '', 14, '2024-05-07', 0),
+(1123, 18, 110, 1, '2024-05-07 10:33:22', '', 14, '2024-05-07', 0);
 
 -- --------------------------------------------------------
 
@@ -7000,7 +7001,8 @@ INSERT INTO `erp_replica_purch_orders` (`order_no`, `supplier_id`, `comments`, `
 (106, 43, '', '2024-05-04', '147/2024	', '123', '00005', 'Ammar address', 500, 0, 0, 0),
 (107, 60, '', '2024-05-05', '148/2024	', '121', '00006', 'D-196 Mr. Irfan address', 202, 0, 0, 0),
 (108, 43, 'TEST \n', '2024-05-05', '149/2024	', 'Zafar Arain Electrician', '00005', 'Ammar address', 10000, 0, 10000, 0),
-(109, 10, '', '2024-05-06', '150/2024	', 'steel', '00005', 'Ammar address', 20400, 0, 0, 0);
+(109, 10, '', '2024-05-06', '150/2024	', 'steel', '00005', 'Ammar address', 20400, 0, 0, 0),
+(110, 65, 'test', '2024-05-07', '151/2024	', '1213', '00005', 'Ammar address', 99, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -7499,7 +7501,8 @@ INSERT INTO `erp_replica_purch_order_details` (`po_detail_item`, `order_no`, `it
 (473, 106, '3123', 'service', '2024-05-14', 0, 500, 0, 0, 1, 0),
 (474, 107, '1004', 'Raiti', '2024-05-15', 2, 101, 101, 55.056369972385, 2, 2),
 (475, 108, '3123', 'service', '2024-05-15', 0, 10000, 0, 0, 1, 0),
-(476, 109, '1001', 'Steel', '2024-05-16', 100, 204, 204, 213.44815792346, 100, 100);
+(476, 109, '1001', 'Steel', '2024-05-16', 100, 204, 204, 213.44815792346, 100, 100),
+(477, 110, '1005', 'Mix', '2024-05-17', 0, 99, 0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -7983,6 +7986,7 @@ INSERT INTO `erp_replica_refs` (`id`, `type`, `reference`) VALUES
 (107, 18, '148/2024	'),
 (108, 18, '149/2024	'),
 (109, 18, '150/2024	'),
+(110, 18, '151/2024	'),
 (1, 20, '001/2022	'),
 (2, 20, '001/2023	'),
 (44, 20, '001/2024	'),
@@ -11539,7 +11543,7 @@ ALTER TABLE `erp_replica_attachments`
 -- AUTO_INCREMENT for table `erp_replica_audit_trail`
 --
 ALTER TABLE `erp_replica_audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1124;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_bank_accounts`
@@ -11821,13 +11825,13 @@ ALTER TABLE `erp_replica_project_units`
 -- AUTO_INCREMENT for table `erp_replica_purch_orders`
 --
 ALTER TABLE `erp_replica_purch_orders`
-  MODIFY `order_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `order_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_purch_order_details`
 --
 ALTER TABLE `erp_replica_purch_order_details`
-  MODIFY `po_detail_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=477;
+  MODIFY `po_detail_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=478;
 
 --
 -- AUTO_INCREMENT for table `erp_replica_quick_entries`
